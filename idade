@@ -1,0 +1,13 @@
+nome = input("Digite seu nome completo: ")
+ano = 0
+while True:
+    try:
+        ano = int(input("Digite seu ano de nascimento (entre 1922 e 2021): "))
+        if ano < 1922 or ano > 2021:
+            raise ValueError
+        break
+    except ValueError:
+        print("Erro: Ano inválido. Por favor, digite novamente.")
+idade = 2022 - ano
+print(f"Nome: {nome}")
+print(f"Idade: {idade}")
